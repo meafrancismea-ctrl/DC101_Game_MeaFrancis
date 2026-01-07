@@ -2,7 +2,9 @@ Quiz & Memory Game
 A simple web-based quiz game with Math, Science, History, and Computers categories. Only Hard and Difficult questions are included. Players answer multiple-choice questions, track their score and streak, and see explanations for each answer.
 
 
-VS Code 
+HTML
+CSS
+JAVASCRIPT
 
 
 How to play:
