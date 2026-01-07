@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('image.css/game quiz.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* === Game Container Placeholder === */
+#game-container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* === Timer Styling === */
+#timer {
+  font-size: 24px;
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.container {
+  background: rgba(2, 61, 88, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #00c6ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0072ff;
+}
+
+/* Quiz Game */
+#quiz,
+#score,
+#leaderboard,
+#progressBar,
+#explanation {
+  margin-top: 20px;
+}
+
+#question {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
+}
+
+#timer {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+#streak {
+  font-weight: bold;
+  color: gold;
+  margin-top: 5px;
+}
+
+#explanation {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#leaderboardList {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+#leaderboardList li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+/* Progress Bar */
+#progressBar {
+  background: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+}
+
+#progress {
+  background: #00ff99;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+/* Memory Challenge */
+#memoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.memory-card {
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.memory-card:hover {
+  background-color: rgba(0, 198, 255, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 0.95em;
+  }
+
+}

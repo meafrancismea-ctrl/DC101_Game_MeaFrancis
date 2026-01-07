@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz & Memory Challenge Game</title>
+  <link rel="stylesheet" href="style-games.css" />
+</head>
+<body>
+   <div class="container">
+
+    <h1>🎯 Quiz Game</h1>
+
+    <label for="gameMode">Select Game Mode:</label>
+    <select id="gameMode" onchange="showGame(this.value)">
+      <option value="quiz">Quiz Game</option>
+      <option value="memory">Memory Challenge</option>
+    </select>
+
+    <!-- Quiz Game Section -->
+    <div id="quizGame">
+
+      <label for="level">Select Level:</label>
+      <select id="level">
+        <option value="easy">Easy</option>
+        <option value="hard">Hard</option>
+        <option value="difficult">Difficult</option>
+      </select>
+
+      <label for="category">Select Category:</label>
+      <select id="category">
+        <option value="math">Math</option>
+        <option value="science">Science</option>
+        <option value="history">History</option>
+        <option value="computers">Computers</option>
+      </select>
+
+      <p id="highScoreDisplay">High Score: 0</p>
+      <button onclick="startQuiz()">Start Quiz</button>
+
+      <div id="quiz" class="hidden">
+        <p id="question"></p>
+        <div id="options"></div>
+        <p id="timer">Time left: 20</p>
+        <p id="streak"></p>
+        <div id="explanation" class="hidden"></div>
+      </div>
+
+      <p id="score" class="hidden">Score: 0</p>
+
+      <div id="progressBar" class="hidden">
+        <div id="progress"></div>
+      </div>
+
+
+    <div id="leaderboard" class="hidden">
+        <h3>🏅 Leaderboard</h3>
+        <ul id="leaderboardList"></ul>
+      </div>
+    </div>
+
+
+    <!-- Memory Challenge Section -->
+    <div id="memoryGame" class="hidden">
+      <h2>🧠 Memory Challenge</h2>
+      <p id="memoryLevelDisplay">Level 1: 4 cards</p>
+      <p id="memoryScoreDisplay">Score: 0</p>
+      <div id="memoryContainer"></div>
+      <button onclick="restartMemoryGame()">Restart Memory Challenge</button>
+    </div>
+
+    <!-- Sounds for Quiz -->
+    <audio id="correctSound" src="style sound.css/correct.mp3" preload="auto"></audio>
+    <audio id="wrongSound" src="style sound.css/buzzer-or-wrong-answer-20582 (1).mp3.mp3" preload="auto"></audio>
+    <audio id="startSound" src="style sound.css/Downloads/big-band-tv-show-logo-164230.mp3" preload="auto"></audio>
+    <audio id="timerBuzz" src="style sound.css/Downloads/buzzer-4-183895.mp3" preload="auto"></audio>
+    
+
+    <!-- Sounds for Memory -->
+    <audio id="memoryStart" src="style sound.css/Downloads/big-band-tv-show-logo-164230.mp3" preload="auto"></audio>
+    <audio id="memoryCorrect" src="style sound.css/correct.mp3" preload="auto"></audio>
+    <audio id="memoryWrong" src="style sound.css/buzzer-or-wrong-answer-20582 (1).mp3.mp3" preload="auto"></audio>
+
+  </div>
+
+  <script src="script-games.js"></script>
+</body>
+</html>
